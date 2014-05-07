@@ -1,4 +1,10 @@
 Pumpgrade::Application.routes.draw do
+  get "course/Course_Notes"
+  get "course/Assignments"
+  get "course/Midterms"
+  get "course/Finals"
+  get "course/Video_Tutorials"
+  get "course/Forums"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
