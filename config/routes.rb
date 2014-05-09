@@ -1,4 +1,6 @@
 Pumpgrade::Application.routes.draw do
+  resources :midterms
+
   get "course/course_notes"
   get "course/assignments"
   get "course/midterms"
