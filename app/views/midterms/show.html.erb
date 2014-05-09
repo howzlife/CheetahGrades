@@ -1,0 +1,36 @@
+<%= render 'header' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School:</strong>
+  <%= @midterm.school %>
+</p>
+
+<p>
+  <strong>Coursecode:</strong>
+  <%= @midterm.courseCode %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @midterm.year %>
+</p>
+
+<p>
+  <strong>Corrected:</strong>
+  <%= @midterm.corrected %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @midterm.professor %>
+</p>
+
+<p>
+  <strong>Semester:</strong>
+  <%= @midterm.semester %>
+</p>
+
+<%= link_to 'Edit', edit_midterm_path(@midterm) %> |
+<%= link_to 'Back', midterms_path %>

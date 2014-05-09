@@ -1,0 +1,38 @@
+<%= render 'header' %>
+<h1>Listing midterms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>Coursecode</th>
+      <th>Year</th>
+      <th>Corrected</th>
+      <th>Professor</th>
+      <th>Semester</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @midterms.each do |midterm| %>
+      <tr>
+        <td><%= midterm.school %></td>
+        <td><%= midterm.courseCode %></td>
+        <td><%= midterm.year %></td>
+        <td><%= midterm.corrected %></td>
+        <td><%= midterm.professor %></td>
+        <td><%= midterm.semester %></td>
+        <td><%= link_to 'Show', midterm %></td>
+        <td><%= link_to 'Edit', edit_midterm_path(midterm) %></td>
+        <td><%= link_to 'Destroy', midterm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Midterm', new_midterm_path %>

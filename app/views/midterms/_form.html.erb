@@ -1,0 +1,41 @@
+<%= form_for(@midterm) do |f| %>
+  <% if @midterm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@midterm.errors.count, "error") %> prohibited this midterm from being saved:</h2>
+
+      <ul>
+      <% @midterm.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label :courseCode %><br>
+    <%= f.text_field :courseCode %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :corrected %><br>
+    <%= f.check_box :corrected %>
+  </div>
+  <div class="field">
+    <%= f.label :professor %><br>
+    <%= f.text_field :professor %>
+  </div>
+  <div class="field">
+    <%= f.label :semester, 'Semester (Fall, Winter, Summer)'%><br>
+    <%= f.text_field :semester %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit Midterm" %>
+  </div>
+<% end %>
