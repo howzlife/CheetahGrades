@@ -1,4 +1,4 @@
-<%= form_for(@midterm) do |f| %>
+<%= form_for @midterm, :multipart => true do |f| %>
   <% if @midterm.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@midterm.errors.count, "error") %> prohibited this midterm from being saved:</h2>
@@ -24,7 +24,7 @@
     <%= f.number_field :year %>
   </div>
   <div class="field">
-    <%= f.label :corrected %><br>
+    <%= f.label :corrected, "Does this file contain answers?" %><br>
     <%= f.check_box :corrected %>
   </div>
   <div class="field">
@@ -35,7 +35,11 @@
     <%= f.label :semester, 'Semester (Fall, Winter, Summer)'%><br>
     <%= f.text_field :semester %>
   </div>
+  <div class="field">>
+  	<%= f.label :file, "Select file to submit" %><br>
+  	<%= f.file_field :file %>
+  </div>
   <div class="actions">
-    <%= f.submit "Submit Midterm" %>
+    <%= f.submit "Submit" %>
   </div>
 <% end %>

@@ -69,6 +69,6 @@ class MidtermsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def midterm_params
-      params.require(:midterm).permit(:school, :courseCode, :year, :corrected, :professor, :semester)
+      params.require(:midterm).permit(:school, :courseCode, :year, :corrected, :professor, :semester, :file)
     end
 end
