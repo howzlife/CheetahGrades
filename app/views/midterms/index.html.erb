@@ -1,12 +1,12 @@
 <%= render 'header' %>
-<h1>Available Midterms</h1>
+<h1 class="text-center">Available Midterms</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th>Year</th>
       <th>School</th>
       <th>Coursecode</th>
-      <th>Year</th>
       <th>Corrected</th>
       <th>Professor</th>
       <th>Semester</th>
@@ -19,9 +19,9 @@
   <tbody>
     <% @midterms.each do |midterm| %>
       <tr>
+      	<td><%= midterm.year %></td>
         <td><%= midterm.school %></td>
         <td><%= midterm.courseCode %></td>
-        <td><%= midterm.year %></td>
         <td><%= midterm.corrected %></td>
         <td><%= midterm.professor %></td>
         <td><%= midterm.semester %></td>
@@ -35,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Midterm', new_midterm_path %>
+<%= link_to 'Submit a Midterm!', new_midterm_path %>

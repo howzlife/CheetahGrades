@@ -10,36 +10,37 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :school %><br>
-    <%= f.text_field :school %>
-  </div>
-  <div class="field">
-    <%= f.label :courseCode %><br>
-    <%= f.text_field :courseCode %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br>
-    <%= f.number_field :year %>
-  </div>
-  <div class="field">
-    <%= f.label :corrected, "Does this file contain answers?" %><br>
-    <%= f.check_box :corrected %>
-  </div>
-  <div class="field">
-    <%= f.label :professor %><br>
-    <%= f.text_field :professor %>
-  </div>
-  <div class="field">
-    <%= f.label :semester, 'Semester (Fall, Winter, Summer)'%><br>
-    <%= f.text_field :semester %>
-  </div>
- <!-- <div class="field">>
-  	<%= f.label :file, "Select file to submit" %><br>
-  	<%= f.file_field :file %>
- </div>-->
-  <div class="actions">
-    <%= f.submit "Submit" %>
-  </div>
+	<div class="text-center">
+	  <div class="field">
+	    <%= f.label :school %><br>
+	    <%= f.text_field :school %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :courseCode, "Course Code"%><br>
+	    <%= f.text_field :courseCode %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :year %><br>
+	    <%= f.number_field :year %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :corrected, "Does this file contain answers?" %><br>
+	    <%= f.check_box :corrected %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :professor %><br>
+	    <%= f.text_field :professor %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :semester, 'Semester (Fall, Winter, Summer)'%><br>
+	    <%= f.text_field :semester %>
+	  </div>
+	 <!-- <div class="field">>
+	  	<%= f.label :file, "Select file to submit" %><br>
+	  	<%= f.file_field :file %>
+	 </div>-->
+	  <div class="actions">
+	    <%= f.submit "Submit" %>
+	  </div>
+	</div>
 <% end %>
