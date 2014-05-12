@@ -30,6 +30,8 @@ class MidtermsController < ApplicationController
       if @midterm.save
         format.html { redirect_to @midterm, notice: 'Midterm was successfully created.' }
         format.json { render action: 'show', status: :created, location: @midterm }
+        #Send an email with uploaded file and parameters
+        MidtermSubmit.new_submission_email(@midterm).deliver
       else
         format.html { render action: 'new' }
         format.json { render json: @midterm.errors, status: :unprocessable_entity }
@@ -69,6 +71,6 @@ class MidtermsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def midterm_params
-      params.require(:midterm).permit(:school, :courseCode, :year, :corrected, :professor, :semester, :file)
+      params.require(:midterm).permit(:school, :courseCode, :year, :corrected, :professor, :semester)
     end
 end
